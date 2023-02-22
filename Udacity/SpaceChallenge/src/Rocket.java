@@ -1,15 +1,30 @@
 public class Rocket implements SpaceShip{
     int rocketCostInMillion;
-    int rocketWeightInTonnes;
-    int maxWeightWithCargo;
-    double baseChanceOfLaunchExplosion;
-    double baseChanceOfLandingCrash;
+    double actualWeightInKg;
+    double maxCargoWeight;
+    double actualCargoWeightInKg;
 
-    boolean launch(double cargoCarried) {
+    @Override
+    public boolean launch() {
         return true;
     }
 
-    boolean land(double cargoCarried){
+    @Override
+    public boolean land(){
         return true;
-    };
+    }
+
+    @Override
+    public boolean canCarry(Item item) {
+        if(this.actualCargoWeightInKg + item.weight < maxCargoWeight){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @Override
+    public void carry(Item item) {
+        this.actualCargoWeightInKg = this.actualCargoWeightInKg + item.weight;
+    }
 }
