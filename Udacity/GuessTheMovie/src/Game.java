@@ -12,7 +12,7 @@ public class Game {
         File file = new File("movies.txt");
         Scanner scanner = new Scanner(file);
 
-        int helpInt = 1;
+        int helpInt = 0;
         int randomMovieLine = (int) (Math.random() * 25) + 1; // generate random number 1-25
 
         while(scanner.hasNextLine()){
@@ -25,7 +25,7 @@ public class Game {
             }
         }
 
-        randomTitle = "samurai test movie" ;   // for tests
+        //randomTitle = "samurai test movie" ;   // for tests
         //System.out.println("Random title is: " + randomTitle + ".");    // for tests
 
         for(int i=0; i<randomTitle.length(); i++){  // setting our guessing to _ and spaces to spaces

@@ -18,7 +18,7 @@ public class U1 extends Rocket{
     }
 
     public boolean land(){
-        System.out.println("U1 land");
+        //System.out.println("U1 land");
         //Chance of landing crash = 1% * (cargo carried / cargo limit)
         double chance = (1 * (this.actualCargoWeightInKg / this.maxCargoWeight));    //% chance of crash on land
         int random = (int) (Math.random() * 100) + 1;

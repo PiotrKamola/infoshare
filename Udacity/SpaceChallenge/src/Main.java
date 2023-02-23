@@ -15,7 +15,7 @@ public class Main {
         int costForPhase2;
         int totalCost;
 
-        System.out.println("U1 Rockets (10 tests):");
+        System.out.println("U1 Rockets (10 tests to see better results):");
         for(int i = 0; i<10; i++) {
             rocketU1Phase1 = Simulation.loadU1(phase1);
             rocketU1Phase2 = Simulation.loadU1(phase2);
@@ -28,7 +28,7 @@ public class Main {
                     " | Total cost in Million is = " + totalCost);
         }
 
-        System.out.println("\nU2 Rockets (10 tests):");
+        System.out.println("\nU2 Rockets (10 tests to see better results):");
         for(int i = 0; i<10; i++) {
             rocketU2Phase1 = Simulation.loadU2(phase1);
             rocketU2Phase2 = Simulation.loadU2(phase2);
